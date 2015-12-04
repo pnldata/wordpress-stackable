@@ -22,6 +22,8 @@ ENV DB_PORT **LinkMe**
 ENV DB_NAME wordpress
 ENV DB_USER admin
 ENV DB_PASS **ChangeMe**
+ENV ENABLE_MULTISITE false
+ENV TABLE_PREFIX wp_
 
 EXPOSE 80
 VOLUME ["/app/wp-content"]

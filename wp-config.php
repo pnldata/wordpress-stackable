@@ -59,7 +59,7 @@ define('NONCE_SALT',       'z6G5thFC]JIW]|ZQIBgZ?zBb^!N#3-Un=)`!Xb/,Yd8[2&}.W{IT
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = getenv('TABLE_PREFIX');
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -79,6 +79,12 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+/**
+ * Enable/Disable MultiSite
+ * Set to true or false
+**/
+define( 'WP_ALLOW_MULTISITE', getenv('MULTISITE_ENABLED'));
 
 /* That's all, stop editing! Happy blogging. */
 
